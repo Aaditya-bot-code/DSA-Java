@@ -1,5 +1,36 @@
-package String;
-//count letters ,digits and special characters
+package Strings;
+/*
+ * Problem: Count the number of letters, digits, and special characters
+ * in a given string.
+ *
+ * Approach: Traverse the string and use Character.isLetter() and
+ * Character.isDigit() to identify each character.
+ *
+ * Algorithm:
+ * 1. Initialize letters, digits, and special_character to 0.
+ * 2. Traverse the string character by character.
+ * 3. If the character is a letter, increment letters.
+ * 4. Else if it is a digit, increment digits.
+ * 5. Otherwise, increment special_character.
+ * 6. Print all three counts.
+ *
+ * Dry Run:
+ * Input: "hello123#@"
+ *
+ * Letters: h, e, l, l, o = 5
+ * Digits: 1, 2, 3 = 3
+ * Special characters: #, @ = 2
+ *
+ * Output:
+ * letters: 5
+ * Digits: 3
+ * special character: 2
+ *
+ * Time Complexity: O(n) - Traverses the string once.
+ * Space Complexity: O(1) - Uses only three counter variables.
+ *
+ * Note: Spaces and punctuation are also counted as special characters.
+ */
 public class DSA19 {
     public static void main(String[] args) {
         String str = "hello123#@";

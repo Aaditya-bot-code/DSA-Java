@@ -1,9 +1,41 @@
-package String;
+package Strings;
 import java.util.HashMap;
-// Isomorphic : 
-//Complexity:
-//  Time: O(n)
-//  Space: O(n)
+/*
+ * Problem: Check whether two strings are isomorphic.
+ *
+ * Approach: Two HashMaps.
+ * Use one map to maintain the mapping from str1 to str2
+ * and another map to maintain the reverse mapping.
+ *
+ * Algorithm:
+ * 1. Check whether both strings have equal lengths.
+ *    - If not, print "Not Isomorphic" and stop.
+ * 2. Create two HashMaps:
+ *    - map1: Maps characters from str1 to str2.
+ *    - map2: Maps characters from str2 to str1.
+ * 3. Traverse both strings simultaneously.
+ * 4. For every pair of characters:
+ *    - Check whether an existing mapping in map1 conflicts.
+ *    - Check whether an existing mapping in map2 conflicts.
+ * 5. If either mapping conflicts, print "Not Isomorphic" and stop.
+ * 6. Otherwise, update both maps.
+ * 7. If the entire traversal completes, print "Isomorphic".
+ *
+ * Dry Run:
+ * str1 = "egg"
+ * str2 = "add"
+ *
+ * e -> a : Store e -> a and a -> e
+ * g -> d : Store g -> d and d -> g
+ * g -> d : Existing mappings are consistent.
+ *
+ * Output: Isomorphic
+ *
+ * Time Complexity: O(n) - Traverses both strings once.
+ * Space Complexity: O(n) - Stores character mappings in two HashMaps.
+ *
+ * Note: Both strings must have a consistent one-to-one character mapping.
+ */
 public class DSA34 {
     public static void main(String[] args) {
         String str1 = "egg";
